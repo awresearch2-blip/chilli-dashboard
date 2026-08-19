@@ -1,0 +1,374 @@
+{
+  "module": "seasonality",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "price_seasonality": {
+      "Teja": {
+        "status": "ok",
+        "seasonal_price_index": {
+          "status": "ok",
+          "index_by_month": {
+            "1": {
+              "index": 96.6,
+              "years_used": 10
+            },
+            "2": {
+              "index": 95.1,
+              "years_used": 10
+            },
+            "3": {
+              "index": 95.5,
+              "years_used": 9
+            },
+            "4": {
+              "index": 91.9,
+              "years_used": 9
+            },
+            "5": {
+              "index": 90.2,
+              "years_used": 9
+            },
+            "6": {
+              "index": 102.8,
+              "years_used": 9
+            },
+            "7": {
+              "index": 103.8,
+              "years_used": 10
+            },
+            "8": {
+              "index": 106.2,
+              "years_used": 10
+            },
+            "9": {
+              "index": 106.4,
+              "years_used": 10
+            },
+            "10": {
+              "index": 104.6,
+              "years_used": 10
+            },
+            "11": {
+              "index": 104.4,
+              "years_used": 10
+            },
+            "12": {
+              "index": 102.6,
+              "years_used": 10
+            }
+          },
+          "months_with_insufficient_evidence": []
+        },
+        "yoy_seasonal_comparison": {
+          "status": "ok",
+          "monthly_vs_historical": {
+            "2025-08-01": {
+              "actual": 13372.22,
+              "historical_avg_same_month": 14139.1,
+              "deviation_pct": -5.42,
+              "years_of_history": 11
+            },
+            "2025-09-01": {
+              "actual": 13815.79,
+              "historical_avg_same_month": 14992.32,
+              "deviation_pct": -7.85,
+              "years_of_history": 11
+            },
+            "2025-10-01": {
+              "actual": 14011.76,
+              "historical_avg_same_month": 14412.89,
+              "deviation_pct": -2.78,
+              "years_of_history": 11
+            },
+            "2025-11-01": {
+              "actual": 14697.5,
+              "historical_avg_same_month": 14465.62,
+              "deviation_pct": 1.6,
+              "years_of_history": 11
+            },
+            "2025-12-01": {
+              "actual": 14322.73,
+              "historical_avg_same_month": 14321.85,
+              "deviation_pct": 0.01,
+              "years_of_history": 11
+            },
+            "2026-01-01": {
+              "actual": 15908.33,
+              "historical_avg_same_month": 13193.34,
+              "deviation_pct": 20.58,
+              "years_of_history": 12
+            },
+            "2026-02-01": {
+              "actual": 17837.5,
+              "historical_avg_same_month": 12497.44,
+              "deviation_pct": 42.73,
+              "years_of_history": 12
+            },
+            "2026-03-01": {
+              "actual": 18646.88,
+              "historical_avg_same_month": 12789.52,
+              "deviation_pct": 45.8,
+              "years_of_history": 12
+            },
+            "2026-04-01": {
+              "actual": 19882.5,
+              "historical_avg_same_month": 11964.88,
+              "deviation_pct": 66.17,
+              "years_of_history": 12
+            },
+            "2026-05-01": {
+              "actual": 18600.0,
+              "historical_avg_same_month": 11803.11,
+              "deviation_pct": 57.59,
+              "years_of_history": 12
+            },
+            "2026-06-01": {
+              "actual": 20890.62,
+              "historical_avg_same_month": 13559.36,
+              "deviation_pct": 54.07,
+              "years_of_history": 12
+            },
+            "2026-07-01": {
+              "actual": 20996.43,
+              "historical_avg_same_month": 13706.8,
+              "deviation_pct": 53.18,
+              "years_of_history": 12
+            }
+          }
+        },
+        "workbook_reported_monthly_avg_by_month": {
+          "Jan": 13620.5,
+          "Feb": 13040.3,
+          "Mar": 13356.8,
+          "Apr": 12807.1,
+          "May": 12501.9,
+          "Jun": 14143.2,
+          "Jul": 13772.7,
+          "Aug": 14168.8,
+          "Sep": 14978.8,
+          "Oct": 14459.6,
+          "Nov": 14541.5,
+          "Dec": 14346.8
+        },
+        "data_quality_caveats": [
+          "The workbook's own 'Seasonality index_Guntur Teja' sheet contains monthly average Teja PRICE LEVELS by year, not a normalized seasonal index, despite its name (verified: its values match the actual daily average almost exactly for the same month/year). Reported below as-is for reference under 'workbook_reported_monthly_avg_by_month' -- this module's own 'seasonal_price_index' is the actual normalized index."
+        ]
+      },
+      "334": {
+        "status": "ok",
+        "seasonal_price_index": {
+          "status": "ok",
+          "index_by_month": {
+            "1": {
+              "index": 100.6,
+              "years_used": 10
+            },
+            "2": {
+              "index": 98.4,
+              "years_used": 10
+            },
+            "3": {
+              "index": 94.6,
+              "years_used": 9
+            },
+            "4": {
+              "index": 92.7,
+              "years_used": 9
+            },
+            "5": {
+              "index": 92.2,
+              "years_used": 9
+            },
+            "6": {
+              "index": 101.1,
+              "years_used": 9
+            },
+            "7": {
+              "index": 100.0,
+              "years_used": 10
+            },
+            "8": {
+              "index": 101.3,
+              "years_used": 10
+            },
+            "9": {
+              "index": 104.1,
+              "years_used": 10
+            },
+            "10": {
+              "index": 103.9,
+              "years_used": 10
+            },
+            "11": {
+              "index": 106.6,
+              "years_used": 10
+            },
+            "12": {
+              "index": 104.6,
+              "years_used": 10
+            }
+          },
+          "months_with_insufficient_evidence": []
+        },
+        "yoy_seasonal_comparison": {
+          "status": "ok",
+          "monthly_vs_historical": {
+            "2025-08-01": {
+              "actual": 13055.56,
+              "historical_avg_same_month": 12593.83,
+              "deviation_pct": 3.67,
+              "years_of_history": 11
+            },
+            "2025-09-01": {
+              "actual": 13907.89,
+              "historical_avg_same_month": 13807.43,
+              "deviation_pct": 0.73,
+              "years_of_history": 11
+            },
+            "2025-10-01": {
+              "actual": 14582.35,
+              "historical_avg_same_month": 13178.06,
+              "deviation_pct": 10.66,
+              "years_of_history": 11
+            },
+            "2025-11-01": {
+              "actual": 16792.5,
+              "historical_avg_same_month": 13487.24,
+              "deviation_pct": 24.51,
+              "years_of_history": 11
+            },
+            "2025-12-01": {
+              "actual": 16465.91,
+              "historical_avg_same_month": 13358.99,
+              "deviation_pct": 23.26,
+              "years_of_history": 11
+            },
+            "2026-01-01": {
+              "actual": 18416.67,
+              "historical_avg_same_month": 12586.62,
+              "deviation_pct": 46.32,
+              "years_of_history": 12
+            },
+            "2026-02-01": {
+              "actual": 22435.0,
+              "historical_avg_same_month": 11749.84,
+              "deviation_pct": 90.94,
+              "years_of_history": 12
+            },
+            "2026-03-01": {
+              "actual": 21828.12,
+              "historical_avg_same_month": 11745.62,
+              "deviation_pct": 85.84,
+              "years_of_history": 12
+            },
+            "2026-04-01": {
+              "actual": 22912.5,
+              "historical_avg_same_month": 11036.6,
+              "deviation_pct": 107.6,
+              "years_of_history": 12
+            },
+            "2026-05-01": {
+              "actual": 22750.0,
+              "historical_avg_same_month": 10925.4,
+              "deviation_pct": 108.23,
+              "years_of_history": 12
+            },
+            "2026-06-01": {
+              "actual": 24593.75,
+              "historical_avg_same_month": 12141.57,
+              "deviation_pct": 102.56,
+              "years_of_history": 12
+            },
+            "2026-07-01": {
+              "actual": 26089.29,
+              "historical_avg_same_month": 12286.8,
+              "deviation_pct": 112.34,
+              "years_of_history": 12
+            }
+          }
+        }
+      }
+    },
+    "arrival_seasonality": {
+      "status": "ok",
+      "seasonal_arrival_index": {
+        "status": "ok",
+        "index_by_month": {
+          "1": {
+            "index": 99.6,
+            "years_used": 10
+          },
+          "2": {
+            "index": 139.5,
+            "years_used": 10
+          },
+          "3": {
+            "index": 147.7,
+            "years_used": 9
+          },
+          "4": {
+            "index": 131.6,
+            "years_used": 9
+          },
+          "5": {
+            "index": 72.6,
+            "years_used": 9
+          },
+          "6": {
+            "index": 74.4,
+            "years_used": 9
+          },
+          "7": {
+            "index": 83.5,
+            "years_used": 10
+          },
+          "8": {
+            "index": 89.5,
+            "years_used": 10
+          },
+          "9": {
+            "index": 88.9,
+            "years_used": 10
+          },
+          "10": {
+            "index": 91.2,
+            "years_used": 10
+          },
+          "11": {
+            "index": 98.0,
+            "years_used": 10
+          },
+          "12": {
+            "index": 83.5,
+            "years_used": 10
+          }
+        },
+        "months_with_insufficient_evidence": []
+      }
+    },
+    "harvest_vs_offseason": {
+      "status": "ok",
+      "harvest_months": [
+        3,
+        2,
+        4
+      ],
+      "offseason_months": [
+        12,
+        6,
+        5
+      ],
+      "note": "Harvest/off-season defined by arrival volume (highest/lowest seasonal arrival index), not price.",
+      "price_behavior_by_variety": {
+        "Teja": {
+          "avg_price_index_during_harvest_months": 94.2,
+          "avg_price_index_during_offseason_months": 98.5
+        },
+        "334": {
+          "avg_price_index_during_harvest_months": 95.2,
+          "avg_price_index_during_offseason_months": 99.3
+        }
+      }
+    }
+  }
+}

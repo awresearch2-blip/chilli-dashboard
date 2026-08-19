@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/latest/
+data/clean/latest/
+logs/
+
+# Local-only tooling, not needed by chilli_desktop/chilli_web and too large
+# for a normal repo (cloudflared.exe alone is ~54MB).
+tools/
+chilli_web/.diskcache/
+.env
+.claude/settings.local.json
+.claude/scheduled_tasks.lock

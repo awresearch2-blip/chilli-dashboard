@@ -1,0 +1,80 @@
+{
+  "module": "market_comparison",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "pairs": {
+      "guntur_vs_warangal": {
+        "status": "ok",
+        "latest_spread": 750.0,
+        "latest_premium_pct_of_b": 3.75,
+        "avg_spread_90d": 484.44,
+        "convergence_divergence": {
+          "status": "ok",
+          "slope_pct_per_period": 1.7547,
+          "r_squared": 0.294,
+          "regime": "range_bound",
+          "observations_used": 90,
+          "label": "stable"
+        },
+        "spread_anomaly_zscore_90d": 0.443,
+        "spread_anomaly_flag": false,
+        "observations_used": 2067
+      },
+      "guntur_vs_khammam_noncold": {
+        "status": "ok",
+        "latest_spread": 4250.0,
+        "latest_premium_pct_of_b": 25.37,
+        "avg_spread_90d": 1025.28,
+        "convergence_divergence": {
+          "status": "ok",
+          "slope_pct_per_period": 2.5617,
+          "r_squared": 0.42,
+          "regime": "uptrend",
+          "observations_used": 90,
+          "label": "diverging"
+        },
+        "spread_anomaly_zscore_90d": 2.593,
+        "spread_anomaly_flag": true,
+        "observations_used": 957
+      },
+      "warangal_vs_khammam_noncold": {
+        "status": "ok",
+        "latest_spread": 3250.0,
+        "latest_premium_pct_of_b": 19.4,
+        "avg_spread_90d": 597.5,
+        "convergence_divergence": {
+          "status": "ok",
+          "slope_pct_per_period": 2.155,
+          "r_squared": 0.337,
+          "regime": "uptrend",
+          "observations_used": 90,
+          "label": "diverging"
+        },
+        "spread_anomaly_zscore_90d": 2.923,
+        "spread_anomaly_flag": true,
+        "observations_used": 952
+      },
+      "guntur_vs_khammam_cold": {
+        "status": "ok",
+        "latest_spread": 1250.0,
+        "latest_premium_pct_of_b": 6.41,
+        "avg_spread_90d": 867.78,
+        "convergence_divergence": {
+          "status": "ok",
+          "slope_pct_per_period": 0.3142,
+          "r_squared": 0.031,
+          "regime": "range_bound",
+          "observations_used": 90,
+          "label": "stable"
+        },
+        "spread_anomaly_zscore_90d": 0.719,
+        "spread_anomaly_flag": false,
+        "observations_used": 1325
+      }
+    },
+    "data_quality_caveats": [
+      "'Spread anomaly' flags a price gap wider than this pair's own recent history (|rolling z-score| > 2), not a validated arbitrage opportunity -- no transport-cost or quality-differential data exists to determine whether it is actually exploitable.",
+      "Khammam has the highest missingness of all price sheets (Phase 1 finding); pairs involving Khammam are correspondingly less reliable."
+    ]
+  }
+}

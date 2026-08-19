@@ -1,0 +1,22 @@
+# Render Blueprint for the Chilli Intelligence web front end.
+# https://render.com/docs/blueprint-spec
+#
+# Deploy: connect this repo on https://dashboard.render.com/blueprints and
+# Render will read this file automatically. No database or extra services
+# are needed -- the workbook ships inside the image / repo.
+
+services:
+  - type: web
+    name: chilli-intelligence-web
+    runtime: python
+    plan: starter
+    region: singapore
+    branch: main
+    buildCommand: "pip install -r chilli_web/requirements.txt"
+    startCommand: "python run_web_production.py --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.13.3
+      - key: CHILLI_WORKBOOK
+        sync: false  # optional: set only if the workbook isn't committed to the repo
+    healthCheckPath: /

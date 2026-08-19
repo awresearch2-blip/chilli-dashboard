@@ -1,0 +1,471 @@
+{
+  "refresh_id": "20260727T154140",
+  "variety": "334",
+  "result": {
+    "status": "ok",
+    "as_of": "2026-07-20",
+    "current_price": 25750.0,
+    "key_drivers": {
+      "status": "ok",
+      "statements": [
+        "trend regime: bullish",
+        "seasonal deviation: bullish",
+        "arrival yoy growth: bullish",
+        "trend regime = uptrend",
+        "momentum roc 30 = 0.13",
+        "percentile trailing 1y = 97.5"
+      ],
+      "bullish_score": 75.0,
+      "bearish_score": 0.0
+    },
+    "forecasts_by_horizon_days": {
+      "7": {
+        "status": "ok",
+        "target_date": "2026-07-27",
+        "point_forecast": 25816.61,
+        "lower_ci": 24805.16,
+        "upper_ci": 26879.75,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 1326.3257944117495,
+          "mae": 1073.9679577987545,
+          "mape": 6.96373604854548,
+          "smape": 7.035909765878075,
+          "n_folds": 6
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 50.0,
+          "bearish_probability_pct": 50.0,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 6
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 23500.0,
+              "realized_change_pct": 0.0
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 23750.0,
+              "realized_change_pct": 1.06
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 23750.0,
+              "realized_change_pct": 1.06
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      },
+      "14": {
+        "status": "ok",
+        "target_date": "2026-08-03",
+        "point_forecast": 25950.62,
+        "lower_ci": 24326.88,
+        "upper_ci": 27397.35,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 2346.5818431630883,
+          "mae": 1780.29902922968,
+          "mape": 10.330356421721303,
+          "smape": 11.026472298205176,
+          "n_folds": 6
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 66.7,
+          "bearish_probability_pct": 33.3,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 6
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 23750.0,
+              "realized_change_pct": 1.06
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 23750.0,
+              "realized_change_pct": 1.06
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 23750.0,
+              "realized_change_pct": 1.06
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "Backtested MAPE for this model/horizon is 10.3% -- historically, forecasts at this horizon have missed actual prices by a meaningful margin.",
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      },
+      "30": {
+        "status": "ok",
+        "target_date": "2026-08-19",
+        "point_forecast": 26737.78,
+        "lower_ci": 24444.34,
+        "upper_ci": 29040.06,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 2936.7333746668287,
+          "mae": 2228.152581448317,
+          "mape": 13.198570995988401,
+          "smape": 14.619756357927924,
+          "n_folds": 6
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 100.0,
+          "bearish_probability_pct": 0.0,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 6
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 23750.0,
+              "realized_change_pct": 1.06
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 23000.0,
+              "realized_change_pct": -2.13
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 23000.0,
+              "realized_change_pct": -2.13
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "Backtested MAPE for this model/horizon is 13.2% -- historically, forecasts at this horizon have missed actual prices by a meaningful margin.",
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      },
+      "60": {
+        "status": "ok",
+        "target_date": "2026-09-18",
+        "point_forecast": 27750.9,
+        "lower_ci": 24156.59,
+        "upper_ci": 31613.57,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 4580.872548864289,
+          "mae": 3845.4907446768984,
+          "mape": 22.261503020089208,
+          "smape": 25.10543512629099,
+          "n_folds": 5
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 100.0,
+          "bearish_probability_pct": 0.0,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 5
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 22500.0,
+              "realized_change_pct": -4.26
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 22500.0,
+              "realized_change_pct": -4.26
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 22500.0,
+              "realized_change_pct": -4.26
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "Only 5 backtest folds were available for this model/horizon -- the accuracy estimate itself is based on a small sample.",
+          "Backtested MAPE for this model/horizon is 22.3% -- historically, forecasts at this horizon have missed actual prices by a meaningful margin.",
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      },
+      "90": {
+        "status": "ok",
+        "target_date": "2026-10-18",
+        "point_forecast": 29052.31,
+        "lower_ci": 24334.65,
+        "upper_ci": 33185.82,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 4387.882934139852,
+          "mae": 3578.2535152070727,
+          "mape": 22.204295008161132,
+          "smape": 24.994827739203473,
+          "n_folds": 6
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 100.0,
+          "bearish_probability_pct": 0.0,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 6
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 23250.0,
+              "realized_change_pct": -1.06
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 22500.0,
+              "realized_change_pct": -4.26
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 23250.0,
+              "realized_change_pct": -1.06
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "90-day-ahead commodity price forecasts carry substantial inherent uncertainty -- treat the confidence interval, not the point value, as the honest answer.",
+          "Backtested MAPE for this model/horizon is 22.2% -- historically, forecasts at this horizon have missed actual prices by a meaningful margin.",
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      },
+      "120": {
+        "status": "ok",
+        "target_date": "2026-11-17",
+        "point_forecast": 29780.84,
+        "lower_ci": 23566.26,
+        "upper_ci": 35684.08,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 3989.895669014376,
+          "mae": 3263.952068114445,
+          "mape": 26.904720561321316,
+          "smape": 30.061978914270416,
+          "n_folds": 5
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 100.0,
+          "bearish_probability_pct": 0.0,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 5
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 21750.0,
+              "realized_change_pct": -7.45
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 21750.0,
+              "realized_change_pct": -7.45
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 21750.0,
+              "realized_change_pct": -7.45
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "120-day-ahead commodity price forecasts carry substantial inherent uncertainty -- treat the confidence interval, not the point value, as the honest answer.",
+          "Only 5 backtest folds were available for this model/horizon -- the accuracy estimate itself is based on a small sample.",
+          "Backtested MAPE for this model/horizon is 26.9% -- historically, forecasts at this horizon have missed actual prices by a meaningful margin.",
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      },
+      "180": {
+        "status": "ok",
+        "target_date": "2027-01-16",
+        "point_forecast": 31703.86,
+        "lower_ci": 24160.52,
+        "upper_ci": 39694.51,
+        "ci_is_empirical_from_backtest_residuals": false,
+        "model_used": "holt_winters",
+        "backtest_accuracy": {
+          "rmse": 5483.0811848227495,
+          "mae": 4779.216581843742,
+          "mape": 28.87096624465667,
+          "smape": 31.98509279525888,
+          "n_folds": 5
+        },
+        "model_explanation": {
+          "type": "model_structure",
+          "status": "ok",
+          "smoothing_level": 1.0,
+          "smoothing_trend": 0.039,
+          "smoothing_seasonal": 0.0,
+          "description": "Exponential-smoothing model: blends the series' current level, trend, and a 52-week seasonal pattern; each smoothing weight above is how much that component reacts to recent observations (higher = more reactive)."
+        },
+        "probability": {
+          "status": "ok",
+          "bullish_probability_pct": 100.0,
+          "bearish_probability_pct": 0.0,
+          "method": "empirical: point_forecast + this exact model/horizon's real backtest residuals, compared to the current price",
+          "n_residuals_used": 5
+        },
+        "similar_historical_periods": {
+          "status": "ok",
+          "similar_periods": [
+            {
+              "date": "2023-08-11",
+              "similarity_distance": 2.576,
+              "price_then": 23500.0,
+              "price_after_horizon": 19250.0,
+              "realized_change_pct": -18.09
+            },
+            {
+              "date": "2023-08-16",
+              "similarity_distance": 2.584,
+              "price_then": 23500.0,
+              "price_after_horizon": 19000.0,
+              "realized_change_pct": -19.15
+            },
+            {
+              "date": "2023-08-14",
+              "similarity_distance": 2.586,
+              "price_then": 23500.0,
+              "price_after_horizon": 19250.0,
+              "realized_change_pct": -18.09
+            }
+          ],
+          "note": "Origin date's own features had a recent data gap; used the nearest complete row 3 day(s) earlier (2026-07-17) instead."
+        },
+        "risks_and_limitations": [
+          "180-day-ahead commodity price forecasts carry substantial inherent uncertainty -- treat the confidence interval, not the point value, as the honest answer.",
+          "Only 5 backtest folds were available for this model/horizon -- the accuracy estimate itself is based on a small sample.",
+          "Backtested MAPE for this model/horizon is 28.9% -- historically, forecasts at this horizon have missed actual prices by a meaningful margin.",
+          "This horizon was rounded to the nearest whole week for Holt-Winters -- the modeled target date may be off by up to 3 days from the exact requested horizon."
+        ]
+      }
+    },
+    "backtest_origins_used": [
+      "2017-01-10",
+      "2018-10-30",
+      "2020-08-19",
+      "2022-06-08",
+      "2024-03-28",
+      "2026-01-16"
+    ]
+  }
+}

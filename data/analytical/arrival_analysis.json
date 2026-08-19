@@ -1,0 +1,114 @@
+{
+  "module": "arrival_analysis",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "arrivals_bags": {
+      "status": "ok",
+      "as_of": "2026-07-20",
+      "latest_daily": 43000.0,
+      "latest_weekly_total": 43000.0,
+      "latest_monthly_total": 523000.0,
+      "rolling_30d_mean": 36966.7,
+      "rolling_90d_mean": 86600.0,
+      "volatility_cv_30d": 0.2,
+      "yoy_growth_pct_latest": -61.8,
+      "mom_growth_pct_latest": -10.8,
+      "seasonal_peak_lean": {
+        "status": "ok",
+        "monthly_avg_arrivals_bags": {
+          "1": 1127538.0,
+          "2": 1659615.0,
+          "3": 1668846.0,
+          "4": 1366462.0,
+          "5": 368308.0,
+          "6": 713615.0,
+          "7": 954846.0,
+          "8": 1073333.0,
+          "9": 1003333.0,
+          "10": 1069333.0,
+          "11": 1288083.0,
+          "12": 1147417.0
+        },
+        "peak_months": [
+          3,
+          2,
+          4
+        ],
+        "lean_months": [
+          7,
+          6,
+          5
+        ],
+        "years_used_per_month": {
+          "1": 13,
+          "2": 13,
+          "3": 13,
+          "4": 13,
+          "5": 13,
+          "6": 13,
+          "7": 13,
+          "8": 12,
+          "9": 12,
+          "10": 12,
+          "11": 12,
+          "12": 12
+        }
+      },
+      "observations_used": 2630
+    },
+    "offtake_bags": {
+      "status": "ok",
+      "as_of": "2026-07-20",
+      "latest_daily": 30000.0,
+      "latest_weekly_total": 30000.0,
+      "latest_monthly_total": 325000.0,
+      "rolling_30d_mean": 22833.3,
+      "rolling_90d_mean": 62888.9,
+      "volatility_cv_30d": 0.2,
+      "yoy_growth_pct_latest": -59.9,
+      "mom_growth_pct_latest": -9.7,
+      "seasonal_peak_lean": {
+        "status": "ok",
+        "monthly_avg_arrivals_bags": {
+          "1": 871077.0,
+          "2": 1391923.0,
+          "3": 1388077.0,
+          "4": 1115231.0,
+          "5": 328615.0,
+          "6": 533308.0,
+          "7": 668538.0,
+          "8": 775417.0,
+          "9": 688667.0,
+          "10": 657833.0,
+          "11": 768750.0,
+          "12": 771917.0
+        },
+        "peak_months": [
+          2,
+          3,
+          4
+        ],
+        "lean_months": [
+          10,
+          6,
+          5
+        ],
+        "years_used_per_month": {
+          "1": 13,
+          "2": 13,
+          "3": 13,
+          "4": 13,
+          "5": 13,
+          "6": 13,
+          "7": 13,
+          "8": 12,
+          "9": 12,
+          "10": 12,
+          "11": 12,
+          "12": 12
+        }
+      },
+      "observations_used": 2630
+    }
+  }
+}

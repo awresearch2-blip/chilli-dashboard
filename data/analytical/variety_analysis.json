@@ -1,0 +1,470 @@
+{
+  "module": "variety_analysis",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "benchmark": "Teja",
+    "per_variety_vs_benchmark": {
+      "334": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.241,
+        "latest_premium_discount_pct": 24.1,
+        "latest_spread": 5000.0,
+        "spread_std_30d": 871.93,
+        "ratio_volatility_cv_30d": 0.0344,
+        "relative_momentum_roc_pct": {
+          "roc_30": 3.64,
+          "roc_90": 4.02
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.9376,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.2409638554216869,
+          "percentile": 97.1,
+          "min": 0.5985915492957746,
+          "q1": 0.813953488372093,
+          "median": 0.9157894736842105,
+          "q3": 1.0,
+          "max": 1.4230769230769231,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "Byadgi": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.2289,
+        "latest_premium_discount_pct": 22.89,
+        "latest_spread": 4750.0,
+        "spread_std_30d": 315.79,
+        "ratio_volatility_cv_30d": 0.0132,
+        "relative_momentum_roc_pct": {
+          "roc_30": 11.19,
+          "roc_90": -6.45
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.9248,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.2289156626506024,
+          "percentile": 93.4,
+          "min": 0.19718309859154928,
+          "q1": 0.5245901639344263,
+          "median": 0.8120471014492754,
+          "q3": 1.0666666666666667,
+          "max": 1.5789473684210527,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "Denvor Delux": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.2048,
+        "latest_premium_discount_pct": 20.48,
+        "latest_spread": 4250.0,
+        "spread_std_30d": 369.8,
+        "ratio_volatility_cv_30d": 0.0154,
+        "relative_momentum_roc_pct": {
+          "roc_30": 17.39,
+          "roc_90": -13.58
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.8987,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.2048192771084338,
+          "percentile": 93.6,
+          "min": 0.6901408450704225,
+          "q1": 0.9032258064516129,
+          "median": 0.9787234042553191,
+          "q3": 1.0469451244390044,
+          "max": 1.4857142857142858,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "Fatki": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 0.7108,
+        "latest_premium_discount_pct": -28.92,
+        "latest_spread": -6000.0,
+        "spread_std_30d": 703.5,
+        "ratio_volatility_cv_30d": 0.0517,
+        "relative_momentum_roc_pct": {
+          "roc_30": -1.77,
+          "roc_90": -1.8
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.6069,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 0.7108433734939759,
+          "percentile": 51.8,
+          "min": 0.4,
+          "q1": 0.5575737214910077,
+          "median": 0.6842105263157895,
+          "q3": 0.9259259259259259,
+          "max": 1.15,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "NCDEX Quality": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.0602,
+        "latest_premium_discount_pct": 6.02,
+        "latest_spread": 1250.0,
+        "spread_std_30d": 1456.05,
+        "ratio_volatility_cv_30d": 0.07,
+        "relative_momentum_roc_pct": {
+          "roc_30": 3.31,
+          "roc_90": 16.31
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.928,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.0602409638554218,
+          "percentile": 95.4,
+          "min": 0.528169014084507,
+          "q1": 0.7431862355331743,
+          "median": 0.8273381294964028,
+          "q3": 0.9207021791767553,
+          "max": 1.358974358974359,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "No.273": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.2048,
+        "latest_premium_discount_pct": 20.48,
+        "latest_spread": 4250.0,
+        "spread_std_30d": 595.06,
+        "ratio_volatility_cv_30d": 0.0251,
+        "relative_momentum_roc_pct": {
+          "roc_30": 11.67,
+          "roc_90": -6.38
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.9091,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.2048192771084338,
+          "percentile": 95.8,
+          "min": 0.7301587301587301,
+          "q1": 0.9211036120484939,
+          "median": 1.0,
+          "q3": 1.0,
+          "max": 1.4342105263157894,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "No.5": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.1807,
+        "latest_premium_discount_pct": 18.07,
+        "latest_spread": 3750.0,
+        "spread_std_30d": 180.27,
+        "ratio_volatility_cv_30d": 0.008,
+        "relative_momentum_roc_pct": {
+          "roc_30": 9.43,
+          "roc_90": -8.25
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.9391,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.180722891566265,
+          "percentile": 94.2,
+          "min": 0.6511627906976745,
+          "q1": 0.8853503184713376,
+          "median": 0.967032967032967,
+          "q3": 1.0348258706467661,
+          "max": 1.4146341463414633,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      },
+      "US 341": {
+        "status": "ok",
+        "latest_ratio_to_benchmark": 1.1807,
+        "latest_premium_discount_pct": 18.07,
+        "latest_spread": 3750.0,
+        "spread_std_30d": 265.71,
+        "ratio_volatility_cv_30d": 0.0111,
+        "relative_momentum_roc_pct": {
+          "roc_30": 15.04,
+          "roc_90": -11.92
+        },
+        "correlation_to_benchmark": {
+          "status": "ok",
+          "r": 0.9141,
+          "p_value": 0.0,
+          "n": 2612
+        },
+        "ratio_percentile_distribution": {
+          "status": "ok",
+          "value": 1.180722891566265,
+          "percentile": 89.9,
+          "min": 0.7,
+          "q1": 0.9298245614035088,
+          "median": 0.9950248756218906,
+          "q3": 1.0677083333333333,
+          "max": 1.451219512195122,
+          "observations_used": 2612
+        },
+        "observations_used": 2612
+      }
+    },
+    "pairwise_correlation_matrix": {
+      "334 vs Byadgi": {
+        "status": "ok",
+        "r": 0.9482,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs Denvor Delux": {
+        "status": "ok",
+        "r": 0.9535,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs Fatki": {
+        "status": "ok",
+        "r": 0.6359,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs NCDEX Quality": {
+        "status": "ok",
+        "r": 0.984,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs No.273": {
+        "status": "ok",
+        "r": 0.9539,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs No.5": {
+        "status": "ok",
+        "r": 0.9818,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs Teja": {
+        "status": "ok",
+        "r": 0.9376,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "334 vs US 341": {
+        "status": "ok",
+        "r": 0.9507,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs Denvor Delux": {
+        "status": "ok",
+        "r": 0.9522,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs Fatki": {
+        "status": "ok",
+        "r": 0.4591,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs NCDEX Quality": {
+        "status": "ok",
+        "r": 0.9328,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs No.273": {
+        "status": "ok",
+        "r": 0.9212,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs No.5": {
+        "status": "ok",
+        "r": 0.9715,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs Teja": {
+        "status": "ok",
+        "r": 0.9248,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Byadgi vs US 341": {
+        "status": "ok",
+        "r": 0.9521,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Denvor Delux vs Fatki": {
+        "status": "ok",
+        "r": 0.5521,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Denvor Delux vs NCDEX Quality": {
+        "status": "ok",
+        "r": 0.9477,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Denvor Delux vs No.273": {
+        "status": "ok",
+        "r": 0.974,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Denvor Delux vs No.5": {
+        "status": "ok",
+        "r": 0.981,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Denvor Delux vs Teja": {
+        "status": "ok",
+        "r": 0.8987,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Denvor Delux vs US 341": {
+        "status": "ok",
+        "r": 0.9846,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Fatki vs NCDEX Quality": {
+        "status": "ok",
+        "r": 0.651,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Fatki vs No.273": {
+        "status": "ok",
+        "r": 0.6115,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Fatki vs No.5": {
+        "status": "ok",
+        "r": 0.5742,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Fatki vs Teja": {
+        "status": "ok",
+        "r": 0.6069,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Fatki vs US 341": {
+        "status": "ok",
+        "r": 0.5238,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "NCDEX Quality vs No.273": {
+        "status": "ok",
+        "r": 0.9566,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "NCDEX Quality vs No.5": {
+        "status": "ok",
+        "r": 0.9727,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "NCDEX Quality vs Teja": {
+        "status": "ok",
+        "r": 0.928,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "NCDEX Quality vs US 341": {
+        "status": "ok",
+        "r": 0.9438,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "No.273 vs No.5": {
+        "status": "ok",
+        "r": 0.9644,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "No.273 vs Teja": {
+        "status": "ok",
+        "r": 0.9091,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "No.273 vs US 341": {
+        "status": "ok",
+        "r": 0.9622,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "No.5 vs Teja": {
+        "status": "ok",
+        "r": 0.9391,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "No.5 vs US 341": {
+        "status": "ok",
+        "r": 0.9792,
+        "p_value": 0.0,
+        "n": 2612
+      },
+      "Teja vs US 341": {
+        "status": "ok",
+        "r": 0.9141,
+        "p_value": 0.0,
+        "n": 2612
+      }
+    },
+    "data_quality_caveats": [
+      "Recomputed directly from daily avg_price series -- replaces the workbook's own precomputed 'Guntur Variety correlation' sheet, which Phase 1 intentionally did not ingest as a raw source (it's a derived snapshot, not new data)."
+    ]
+  }
+}

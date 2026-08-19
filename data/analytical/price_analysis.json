@@ -1,0 +1,154 @@
+{
+  "module": "price_analysis",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "Teja": {
+      "status": "ok",
+      "as_of": "2026-07-20",
+      "latest_avg_price": 20750.0,
+      "latest_range": {
+        "low": 19500.0,
+        "high": 22000.0
+      },
+      "cagr": {
+        "status": "ok",
+        "cagr_pct": 5.79,
+        "start_date": "2014-01-10",
+        "end_date": "2026-07-20",
+        "start_value": 10250.0,
+        "end_value": 20750.0,
+        "years_spanned": 12.52
+      },
+      "moving_averages": {
+        "sma_7": 21000.0,
+        "sma_30": 20881.67,
+        "sma_90": 19480.0,
+        "ema_7": 20921.07,
+        "ema_30": 20726.39
+      },
+      "volatility_cv_30d": 0.02,
+      "drawdown": {
+        "status": "ok",
+        "max_drawdown_pct": -66.17,
+        "peak_date": "2016-02-16",
+        "trough_date": "2017-05-04",
+        "recovered": true,
+        "recovery_date": "2019-07-29",
+        "days_to_recover": 816
+      },
+      "momentum_roc_pct": {
+        "roc_7": -0.01,
+        "roc_30": 0.09,
+        "roc_90": 0.11
+      },
+      "trend_strength_90obs": {
+        "status": "ok",
+        "slope_pct_per_period": 0.2263,
+        "r_squared": 0.763,
+        "regime": "uptrend",
+        "observations_used": 90
+      },
+      "percentile_distribution": {
+        "trailing_1y": {
+          "status": "ok",
+          "value": 20750.0,
+          "percentile": 94.0,
+          "min": 11250.0,
+          "q1": 13050.0,
+          "median": 14300.0,
+          "q3": 17500.0,
+          "max": 21100.0,
+          "observations_used": 365
+        },
+        "full_history": {
+          "status": "ok",
+          "value": 20750.0,
+          "percentile": 89.7,
+          "min": 4500.0,
+          "q1": 9800.0,
+          "median": 13250.0,
+          "q3": 17500.0,
+          "max": 24500.0,
+          "observations_used": 2612
+        }
+      },
+      "observations_used": 2612,
+      "data_quality_caveats": []
+    },
+    "334": {
+      "status": "ok",
+      "as_of": "2026-07-20",
+      "latest_avg_price": 25750.0,
+      "latest_range": {
+        "low": 24000.0,
+        "high": 27500.0
+      },
+      "cagr": {
+        "status": "ok",
+        "cagr_pct": 11.42,
+        "start_date": "2014-01-10",
+        "end_date": "2026-07-20",
+        "start_value": 6650.0,
+        "end_value": 25750.0,
+        "years_spanned": 12.52
+      },
+      "moving_averages": {
+        "sma_7": 26428.57,
+        "sma_30": 25191.67,
+        "sma_90": 23366.11,
+        "ema_7": 26174.64,
+        "ema_30": 25312.47
+      },
+      "volatility_cv_30d": 0.04,
+      "drawdown": {
+        "status": "ok",
+        "max_drawdown_pct": -77.36,
+        "peak_date": "2016-02-16",
+        "trough_date": "2017-05-04",
+        "recovered": true,
+        "recovery_date": "2019-09-04",
+        "days_to_recover": 853
+      },
+      "momentum_roc_pct": {
+        "roc_7": -0.02,
+        "roc_30": 0.13,
+        "roc_90": 0.16
+      },
+      "trend_strength_90obs": {
+        "status": "ok",
+        "slope_pct_per_period": 0.2064,
+        "r_squared": 0.696,
+        "regime": "uptrend",
+        "observations_used": 90
+      },
+      "percentile_distribution": {
+        "trailing_1y": {
+          "status": "ok",
+          "value": 25750.0,
+          "percentile": 97.5,
+          "min": 11000.0,
+          "q1": 12500.0,
+          "median": 14000.0,
+          "q3": 21500.0,
+          "max": 26500.0,
+          "observations_used": 365
+        },
+        "full_history": {
+          "status": "ok",
+          "value": 25750.0,
+          "percentile": 97.7,
+          "min": 3000.0,
+          "q1": 8587.5,
+          "median": 11900.0,
+          "q3": 16000.0,
+          "max": 28500.0,
+          "observations_used": 2612
+        }
+      },
+      "observations_used": 2612,
+      "data_quality_caveats": [
+        "Referred to as 'LCA334' in the brief; the workbook labels this variety column '334'."
+      ]
+    }
+  }
+}

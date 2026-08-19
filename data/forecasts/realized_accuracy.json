@@ -1,0 +1,8 @@
+{
+  "refresh_id": "20260805T112115",
+  "result": {
+    "status": "insufficient_evidence",
+    "reason": "No logged forecasts have reached their target date yet -- nothing to score",
+    "forecasts_pending": 42
+  }
+}

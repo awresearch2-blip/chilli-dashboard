@@ -1,0 +1,16 @@
+# Chilli Intelligence Desktop -- runtime dependencies.
+#
+# Verified against the versions in the right-hand column on Python 3.13.3 /
+# Windows 11. The lower bounds are the earliest releases that expose every API
+# the application uses; newer releases are expected to work.
+#
+#   package            minimum      verified against
+#   -----------------  -----------  ----------------
+PySide6>=6.7           # 6.11.1  -- Qt widgets, QtAgg canvas host
+matplotlib>=3.9        # 3.11.1  -- charts, PNG/PDF export
+pandas>=2.2            # 3.0.5   -- data frames, resampling
+numpy>=1.26            # 2.5.1   -- numerics
+scipy>=1.13            # 1.18.0  -- correlation, t-tests, normal quantiles
+statsmodels>=0.14      # 0.14.6  -- ARIMA/SARIMAX/HW/VAR/VECM, ADF/KPSS,
+                       #            Granger, Johansen, STL, VIF
+openpyxl>=3.1          # 3.1.5   -- reads the .xlsx workbook

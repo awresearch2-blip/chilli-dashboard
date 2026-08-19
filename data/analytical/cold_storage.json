@@ -1,0 +1,61 @@
+{
+  "module": "cold_storage",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "per_region": {
+      "Andhra Pradesh": {
+        "status": "insufficient_evidence_for_trend",
+        "latest_known_value": 16800000.0,
+        "latest_known_date": "2026-05-01",
+        "observations_available": 2,
+        "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+      },
+      "Telangana": {
+        "status": "insufficient_evidence_for_trend",
+        "latest_known_value": 8100000.0,
+        "latest_known_date": "2026-05-01",
+        "observations_available": 2,
+        "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+      },
+      "Karnataka": {
+        "status": "insufficient_evidence_for_trend",
+        "latest_known_value": 8500000.0,
+        "latest_known_date": "2026-05-01",
+        "observations_available": 2,
+        "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+      },
+      "Guntur": {
+        "status": "insufficient_evidence_for_trend",
+        "latest_known_value": 3276900.0,
+        "latest_known_date": "2026-04-01",
+        "observations_available": 2,
+        "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+      },
+      "Warangal": {
+        "status": "insufficient_evidence_for_trend",
+        "latest_known_value": 1811118.0,
+        "latest_known_date": "2026-07-01",
+        "observations_available": 2,
+        "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+      },
+      "Khammam": {
+        "status": "insufficient_evidence_for_trend",
+        "latest_known_value": 1515400.0,
+        "latest_known_date": "2026-07-01",
+        "observations_available": 3,
+        "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+      }
+    },
+    "impact_on_arrivals": {
+      "status": "insufficient_evidence",
+      "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+    },
+    "impact_on_price": {
+      "status": "insufficient_evidence",
+      "reason": "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+    },
+    "data_quality_caveats": [
+      "Only a handful of sparse rows exist in this sheet as of the current workbook (Phase 1 finding) -- not enough real history for trend or impact-on-arrivals/price analysis."
+    ]
+  }
+}

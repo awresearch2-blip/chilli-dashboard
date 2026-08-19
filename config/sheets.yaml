@@ -1,0 +1,221 @@
+# Declarative parsing spec for the Chilli mastersheet workbook.
+#
+# Every sheet the ingestion layer knows how to parse MUST have an entry here,
+# keyed by the EXACT sheet name as it appears in the workbook. A sheet found
+# in the workbook that has no entry here is never guessed at -- it is logged
+# in the Data Quality Report as UNCONFIGURED SHEET DETECTED, and a person
+# adds a config entry (this file), not new Python code.
+#
+# Tokens in `invalid_tokens` are matched case-insensitively after stripping
+# whitespace and are converted to missing (NaN) during cleaning -- never
+# imputed, just marked absent and logged.
+
+global_invalid_tokens: ["closed", "na", "n/a", "-", "", "#div/0!", "#n/a", "#value!"]
+
+sheets:
+
+  "Seasonality index_Guntur Teja":
+    layout: wide_pivot_year_month
+    notes: >
+      Rows 1-16 are Year x Month seasonality index values. Rows below that are
+      a legend/footnote block (e.g. "low price/demand", "neutral") and must
+      never be treated as data -- excluded via data_row_filter, not a fixed
+      row count, so new rows added above the legend are still picked up.
+    id_column: {index: 1, name: "Year", role: year}
+    header_row: 1                    # Jan..Dec column names
+    data_start_row: 2
+    data_row_filter: id_is_4digit_year
+    value_name: seasonality_index
+    value_role: index
+    invalid_tokens: []
+
+  "Guntur Varietywise daily price":
+    layout: wide_pivot_merged_header
+    notes: >
+      2-row merged header: row1 = variety (9 varieties x 4 sub-columns),
+      row2 = Low/High/Avg/Difference. Sheet dimensions overstate real data
+      by ~6 trailing blank rows -- trimmed via trim_trailing_blank on the
+      Date column, not a fixed row number.
+    id_column: {index: 1, name: "Date", role: date}
+    header_rows: [1, 2]
+    data_start_row: 3
+    trim_trailing_blank: true
+    group_role: variety
+    metric_roles:
+      "low price": {rename: low_price, role: price}
+      "high price": {rename: high_price, role: price}
+      "avg price": {rename: avg_price, role: computed}
+      "difference": {rename: price_difference, role: computed}
+    invalid_tokens: []
+
+  "Guntur Variety correlation":
+    layout: derived_skip
+    reason: >
+      Precomputed correlation matrix (formula-derived), not a raw source
+      table. Phase 2's analytics engine recomputes correlations directly
+      from the price sheets instead of trusting a static snapshot.
+
+  "USD to INR exchange rate":
+    layout: long
+    notes: "Cleanest sheet. Stored most-recent-first; normalized to ascending on ingest."
+    id_column: {index: 1, name: "Date", role: date}
+    header_row: 1
+    data_start_row: 2
+    sort: ascending
+    trim_trailing_blank: true
+    columns:
+      "USD": {rename: usd_inr_rate, role: fx_rate}
+    invalid_tokens: []
+
+  "Guntur Daily arrivals":
+    layout: long
+    notes: "Unit: 1 bag = 45 Kg (per sheet header text)."
+    id_column: {index: 1, name: "Date", role: date}
+    header_row: 1
+    data_start_row: 2
+    sort: ascending
+    trim_trailing_blank: true
+    columns:
+      " Arrivals bag = 45 Kg": {rename: arrivals_bags, role: arrival}
+      "Offtake one bag = 45 Kg": {rename: offtake_bags, role: arrival}
+    invalid_tokens: []
+
+  "Warangal Teja Price& Arrivals":
+    layout: long
+    notes: >
+      Unit: 1 bag = 40 kg -- DIFFERENT from Guntur's 45kg bag. Do not compare
+      arrival volumes across markets without converting units first.
+    id_column: {index: 1, name: "Date", role: date}
+    header_row: 1
+    data_start_row: 2
+    sort: ascending
+    trim_trailing_blank: true
+    columns:
+      "Low price": {rename: low_price, role: price}
+      "High Price": {rename: high_price, role: price}
+      "Average Price": {rename: avg_price, role: computed}
+      "Arrival(Bags) 1 bag=40 kg": {rename: arrivals_bags, role: arrival}
+    invalid_tokens: []
+
+  "Khammam Teja Price& Arrivals":
+    layout: wide_pivot_merged_header
+    notes: >
+      Highest missingness of all sheets (~44% of a sampled column) including
+      literal "#DIV/0!" formula-error strings baked into cells. Header is
+      structurally ambiguous for the "Average Price" columns (D and G) --
+      after unmerging, both collapse to the same bare label "Average Price"
+      with no cold/non-cold qualifier, so this sheet uses explicit
+      column_overrides by column letter instead of generic group/metric
+      reconstruction. Unit: 1 bag = 38 kg.
+    id_column: {index: 1, name: "Date", role: date}
+    header_rows: [1, 2]
+    data_start_row: 3
+    trim_trailing_blank: true
+    column_overrides:
+      B: {name: low_price_cold_storage, role: price}
+      C: {name: high_price_cold_storage, role: price}
+      D: {name: avg_price_cold_storage, role: computed}
+      E: {name: low_price_non_cold_storage, role: price}
+      F: {name: high_price_non_cold_storage, role: price}
+      G: {name: avg_price_non_cold_storage, role: computed}
+      H: {name: arrivals_cold_storage_bags, role: arrival}
+      I: {name: arrivals_non_cold_storage_bags, role: arrival}
+    invalid_tokens: ["#div/0!"]
+
+  "Red chilli exports":
+    layout: wide_pivot_year_month
+    notes: >
+      Months as rows, years 2015-2026 as columns. 2026 column only populated
+      Jan-Jun (rest genuinely missing -- current partial year, not an error).
+      Unit is not labeled anywhere in the sheet; treated as the workbook's
+      native unit and left unnamed rather than guessed.
+    id_column: {index: 1, name: "Months", role: month_name}
+    header_row: 1
+    data_start_row: 2
+    value_name: export_volume
+    value_role: export_volume
+    invalid_tokens: []
+
+  "Red Chilli Balance sheet":
+    layout: wide_pivot_year_cols
+    notes: >
+      Row1 is a title/unit label ("Unit - Lakh Tons"), not real header --
+      real header (Particulars + years) is row2. Last year column
+      "2026(exp)" is the workbook author's own forecast, tagged
+      is_estimate=True rather than mixed in with actuals.
+    id_column: {index: 1, name: "Particulars", role: category}
+    header_row: 2
+    data_start_row: 3
+    value_name: value_lakh_tons
+    unit_note: "Lakh Tons"
+    estimate_columns: ["2026(exp)"]
+    invalid_tokens: []
+
+  "Guntur Monthly Arrivals":
+    layout: wide_pivot_year_month
+    notes: >
+      Row1 is a merged title ("Guntur Monthly Arrivals (bags)"), real header
+      is row2. Row2 also has stray annotation cells beyond the year columns
+      (a floating "45" and "1 bag = 45 Kg" unit note) -- excluded from parsed
+      data via max_data_column, not treated as a 14th year. Row15 is a
+      "Total" aggregate row -- excluded via data_row_filter to avoid double
+      counting, not treated as a data year.
+      IMPORTANT: this sheet contains a SECOND, independent table starting
+      around row17 ("Guntur Monthly Arrivals (Qtl)") that is the exact same
+      data unit-converted (bags x 0.45 = Qtl, since 1 bag = 45 Kg and
+      1 Qtl = 100 Kg -- verified e.g. Jan-2014: 622000 x 0.45 = 279900,
+      matches exactly). It is intentionally NOT ingested as separate data
+      (stop_at_blank_id halts parsing at the blank row16 separator) to avoid
+      double-counting the same observations in two units; the conversion
+      factor is documented here so a human can recompute it if ever needed.
+    id_column: {index: 1, name: "Months", role: month_name}
+    header_row: 2
+    data_start_row: 3
+    max_data_column: 14
+    data_row_filter: [stop_at_blank_id, exclude_total_row]
+    value_name: arrivals_bags
+    invalid_tokens: []
+
+  "APY":
+    layout: wide_pivot_merged_header
+    notes: >
+      Rows = states, 2-row merged header = Year x {Area(Ha), Production(MT),
+      Yield}. Header cell A1 contains a mojibake non-breaking-space character
+      ("\xa0States ") -- id column is addressed by position (index 1), not by
+      matching that literal text, so the mojibake doesn't break parsing.
+      "Yield(Tonnes/Ha.)" (2025 column) and "Yield(Tons/Ha.)" (all other
+      years) are the same metric with a spelling variant -- normalized to one
+      name. The trailing "2026(exp)" group only has Area filled in the
+      source (Production/Yield genuinely blank, not a bug) and is tagged
+      is_estimate=True.
+    id_column: {index: 1, name: "States", role: category}
+    header_rows: [1, 2]
+    data_start_row: 3
+    group_role: year
+    metric_roles:
+      "area (ha)": {rename: area_ha, role: area}
+      "production(mt)": {rename: production_mt, role: production}
+      "yield(tons/ha.)": {rename: yield_tons_per_ha, role: yield}
+      "yield(tonnes/ha.)": {rename: yield_tons_per_ha, role: yield}
+    estimate_groups: ["2026(exp)"]
+    invalid_tokens: []
+
+  "cold storage":
+    layout: sparse_tracker
+    notes: >
+      Extremely sparse (6 rows as of 2026-07-27); each row typically
+      populates only 1-2 of the 6 stock columns. Not yet a usable time
+      series -- downstream analytics should report "Insufficient evidence"
+      rather than analyze this sheet until it accumulates more history.
+    date_construction: {year_column: "Year", month_column: "Month"}
+    header_row: 1
+    data_start_row: 2
+    columns:
+      "AP Stock (Bags)": {rename: ap_stock_bags, role: storage_stock}
+      "Telangana Stock (Bags)": {rename: telangana_stock_bags, role: storage_stock}
+      "Karnataka Stock (Bags)": {rename: karnataka_stock_bags, role: storage_stock}
+      "Guntur Stock (Bags)": {rename: guntur_stock_bags, role: storage_stock}
+      "Warangal Stock (Bags)": {rename: warangal_stock_bags, role: storage_stock}
+      "Khammam Stock (Bags)": {rename: khammam_stock_bags, role: storage_stock}
+    invalid_tokens: []
+    sparse_flag: true

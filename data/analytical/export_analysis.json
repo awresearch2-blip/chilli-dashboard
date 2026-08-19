@@ -1,0 +1,178 @@
+{
+  "module": "export_analysis",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "status": "ok",
+    "cagr": {
+      "status": "ok",
+      "cagr_pct": 4.89,
+      "start_date": "2015-01-01",
+      "end_date": "2026-05-01",
+      "start_value": 25067.11,
+      "end_value": 43049.5,
+      "years_spanned": 11.33
+    },
+    "yoy_growth_pct_latest": -29.58,
+    "mom_growth_pct_latest": -38.04,
+    "seasonal_export_index": {
+      "status": "ok",
+      "index_by_month": {
+        "1": {
+          "index": 80.5,
+          "years_used": 10
+        },
+        "2": {
+          "index": 135.3,
+          "years_used": 10
+        },
+        "3": {
+          "index": 156.6,
+          "years_used": 10
+        },
+        "4": {
+          "index": 125.0,
+          "years_used": 10
+        },
+        "5": {
+          "index": 91.3,
+          "years_used": 10
+        },
+        "6": {
+          "index": 72.7,
+          "years_used": 10
+        },
+        "7": {
+          "index": 95.1,
+          "years_used": 11
+        },
+        "8": {
+          "index": 90.5,
+          "years_used": 11
+        },
+        "9": {
+          "index": 91.1,
+          "years_used": 11
+        },
+        "10": {
+          "index": 86.2,
+          "years_used": 11
+        },
+        "11": {
+          "index": 89.1,
+          "years_used": 11
+        },
+        "12": {
+          "index": 86.5,
+          "years_used": 11
+        }
+      },
+      "months_with_insufficient_evidence": []
+    },
+    "vs_price": {
+      "Teja": {
+        "pearson_correlation": {
+          "status": "ok",
+          "r": 0.0441,
+          "p_value": 0.6114,
+          "n": 135
+        },
+        "spearman_correlation": {
+          "status": "ok",
+          "r": 0.0961,
+          "p_value": 0.2676,
+          "n": 135
+        },
+        "lag_correlogram_6mo": {
+          "status": "ok",
+          "lags": [
+            -6,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "correlations": [
+            0.2986,
+            0.2861,
+            0.2572,
+            0.1943,
+            0.128,
+            0.0837,
+            0.0441,
+            0.0301,
+            0.0217,
+            0.0624,
+            0.1233,
+            0.136,
+            0.1568
+          ],
+          "best_lag": -6,
+          "best_corr": 0.2986
+        },
+        "aligned_months_used": 135
+      },
+      "334": {
+        "pearson_correlation": {
+          "status": "ok",
+          "r": 0.0166,
+          "p_value": 0.8488,
+          "n": 135
+        },
+        "spearman_correlation": {
+          "status": "ok",
+          "r": 0.0339,
+          "p_value": 0.6964,
+          "n": 135
+        },
+        "lag_correlogram_6mo": {
+          "status": "ok",
+          "lags": [
+            -6,
+            -5,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "correlations": [
+            0.2315,
+            0.2311,
+            0.2079,
+            0.1635,
+            0.1138,
+            0.0739,
+            0.0166,
+            -0.0002,
+            -0.0058,
+            0.0067,
+            0.0528,
+            0.0722,
+            0.1168
+          ],
+          "best_lag": -6,
+          "best_corr": 0.2315
+        },
+        "aligned_months_used": 135
+      }
+    },
+    "observations_used": 137,
+    "data_quality_caveats": [
+      "Export volume's unit is not labeled anywhere in the workbook -- treated as the workbook's native unit, not guessed at."
+    ]
+  }
+}

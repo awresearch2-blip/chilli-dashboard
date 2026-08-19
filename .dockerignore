@@ -1,0 +1,13 @@
+.venv/
+.git/
+__pycache__/
+*.pyc
+.pytest_cache/
+logs/
+exports/
+data/
+tests/
+tools/
+chilli_web/.diskcache/
+*.log
+.env

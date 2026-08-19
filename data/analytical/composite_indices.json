@@ -1,0 +1,212 @@
+{
+  "module": "composite_indices",
+  "refresh_id": "20260805T112115",
+  "result": {
+    "per_variety": {
+      "Teja": {
+        "market_strength_index": {
+          "status": "ok",
+          "index": 81.4,
+          "components_used": 3,
+          "components": {
+            "trend_regime": {
+              "raw": "uptrend",
+              "score": 100
+            },
+            "momentum_roc_30": {
+              "raw": 0.09,
+              "score": 50.224999999999994
+            },
+            "percentile_trailing_1y": {
+              "raw": 94.0,
+              "score": 94.0
+            }
+          }
+        },
+        "price_stability_index": {
+          "status": "ok",
+          "index": 80.0,
+          "components": {
+            "volatility_cv_30d": {
+              "raw": 0.02,
+              "instability_score": 20.0
+            }
+          }
+        },
+        "risk_score": {
+          "status": "ok",
+          "score": 51.4,
+          "components_used": 2,
+          "components": {
+            "volatility_cv_30d": {
+              "raw": 0.02,
+              "score": 20.0
+            },
+            "max_drawdown_pct": {
+              "raw": -66.17,
+              "score": 82.7125
+            }
+          }
+        },
+        "bullish_bearish": {
+          "status": "ok",
+          "bullish_score": 75.0,
+          "bearish_score": 0.0,
+          "signals_evaluated": 4,
+          "signals": {
+            "trend_regime": "bullish",
+            "momentum_roc_30": "neutral",
+            "seasonal_deviation": "bullish",
+            "arrival_yoy_growth": "bullish"
+          }
+        },
+        "confidence_score": {
+          "status": "ok",
+          "score": 100.0,
+          "components": {
+            "component_availability_pct": 100.0,
+            "sample_size_adequacy_pct": 100.0
+          }
+        },
+        "composite_commodity_index": {
+          "status": "ok",
+          "index": 57.6,
+          "components_used": [
+            "market_strength",
+            "supply_pressure_inverted",
+            "demand",
+            "stability"
+          ],
+          "weights_renormalized": false
+        }
+      },
+      "334": {
+        "market_strength_index": {
+          "status": "ok",
+          "index": 82.6,
+          "components_used": 3,
+          "components": {
+            "trend_regime": {
+              "raw": "uptrend",
+              "score": 100
+            },
+            "momentum_roc_30": {
+              "raw": 0.13,
+              "score": 50.324999999999996
+            },
+            "percentile_trailing_1y": {
+              "raw": 97.5,
+              "score": 97.5
+            }
+          }
+        },
+        "price_stability_index": {
+          "status": "ok",
+          "index": 60.0,
+          "components": {
+            "volatility_cv_30d": {
+              "raw": 0.04,
+              "instability_score": 40.0
+            }
+          }
+        },
+        "risk_score": {
+          "status": "ok",
+          "score": 68.3,
+          "components_used": 2,
+          "components": {
+            "volatility_cv_30d": {
+              "raw": 0.04,
+              "score": 40.0
+            },
+            "max_drawdown_pct": {
+              "raw": -77.36,
+              "score": 96.7
+            }
+          }
+        },
+        "bullish_bearish": {
+          "status": "ok",
+          "bullish_score": 75.0,
+          "bearish_score": 0.0,
+          "signals_evaluated": 4,
+          "signals": {
+            "trend_regime": "bullish",
+            "momentum_roc_30": "neutral",
+            "seasonal_deviation": "bullish",
+            "arrival_yoy_growth": "bullish"
+          }
+        },
+        "confidence_score": {
+          "status": "ok",
+          "score": 100.0,
+          "components": {
+            "component_availability_pct": 100.0,
+            "sample_size_adequacy_pct": 100.0
+          }
+        },
+        "composite_commodity_index": {
+          "status": "ok",
+          "index": 56.1,
+          "components_used": [
+            "market_strength",
+            "supply_pressure_inverted",
+            "demand",
+            "stability"
+          ],
+          "weights_renormalized": false
+        }
+      }
+    },
+    "market_wide": {
+      "supply_pressure_index": {
+        "status": "ok",
+        "index": 51.7,
+        "components_used": 3,
+        "components": {
+          "arrival_yoy_growth": {
+            "raw": -61.8,
+            "score": 0.0
+          },
+          "rolling_arrivals_vs_seasonal_norm": {
+            "raw": 1.1614448822113723,
+            "score": 66.14448822113724
+          },
+          "balance_sheet_surplus_lakh_tons": {
+            "raw": 3.9,
+            "score": 89.0
+          }
+        }
+      },
+      "arrival_pressure_index": {
+        "status": "ok",
+        "index": 10.0,
+        "components": {
+          "seasonal_position": {
+            "raw": 7,
+            "score": 20
+          },
+          "rolling_30_vs_90_ratio": {
+            "raw": 0.4268672055427251,
+            "score": 0.0
+          }
+        }
+      },
+      "demand_index": {
+        "status": "ok",
+        "index": 12.9,
+        "components": {
+          "offtake_yoy_growth": {
+            "raw": -59.9,
+            "score": 0.0
+          },
+          "offtake_mom_growth": {
+            "raw": -9.7,
+            "score": 25.75
+          }
+        }
+      }
+    },
+    "methodology_note": "All scores are transparent, documented formulas over already-computed Phase 2a/2b metrics -- see this module's docstring for exact formulas. These are research-terminal heuristics, not predictions or financial advice."
+  }
+}
