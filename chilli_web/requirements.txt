@@ -27,10 +27,10 @@ python-dateutil>=2.9           # 2.9.0   -- date arithmetic
 dash>=2.17,<5                  # 4.4.1   -- app framework, pages, callbacks
 dash-bootstrap-components>=1.6 # 2.0.4   -- layout components
 plotly>=5.24                   # 6.9.0   -- interactive charts (browser-rendered)
-diskcache>=5.6                 # 5.6.3   -- background-callback manager backend
-psutil>=5.9                    # 7.2.2   -- required by Dash's DiskcacheManager at
-                                #            import time, not just a transitive dep
-                                #            (missing this crashes app.py on start-up)
-multiprocess>=0.70              # 0.70.19 -- also required by DiskcacheManager
+diskcache>=5.6                 # 5.6.3   -- result/progress storage for
+                                #            background_manager.ThreadedDiskcacheManager
+                                #            (psutil/multiprocess NOT needed -- those
+                                #            are only for Dash's stock subprocess-based
+                                #            DiskcacheManager, which this app doesn't use)
 Flask>=3.0                     # 3.1.3   -- underlying WSGI app (via Dash)
 waitress>=3.0                  # 3.0.2   -- production WSGI server (run_web_production.py)

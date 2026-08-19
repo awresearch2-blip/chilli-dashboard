@@ -13,8 +13,14 @@ presentation layer (this package) differs.
 
 Long-running analyses (the forecast sweep, the market-integration battery, the
 automated-insights sweep) run as Dash *background callbacks* backed by
-``diskcache`` -- a local, dependency-free stand-in for the desktop app's
-``QThreadPool`` workers. No Redis or Celery is required.
+``diskcache`` for result/progress storage, executed on a plain thread via
+:class:`chilli_web.background_manager.ThreadedDiskcacheManager` -- a stand-in
+for the desktop app's own in-process ``QThreadPool`` workers. Dash's stock
+``DiskcacheManager`` spawns a full subprocess per job instead, which
+duplicates the entire pandas/numpy/scipy/statsmodels/xgboost import cost and
+reliably gets OOM-killed on memory-constrained hosts; see
+``background_manager.py`` for the detailed rationale. No Redis or Celery is
+required either way.
 """
 
 from __future__ import annotations
@@ -26,20 +32,21 @@ from pathlib import Path
 
 import dash
 import diskcache
-from dash import DiskcacheManager, dcc, html
+from dash import dcc, html
 from flask import Response, request
 
 from chilli_desktop import settings
 from chilli_desktop.utils import LOG, WorkbookError
 
 from . import assets_writer, layout_shell, server_state
+from .background_manager import ThreadedDiskcacheManager
 
 PACKAGE_DIR = Path(__file__).resolve().parent
 
 assets_writer.write_theme_css()
 
 _cache = diskcache.Cache(str(PACKAGE_DIR / ".diskcache"))
-background_callback_manager = DiskcacheManager(_cache)
+background_callback_manager = ThreadedDiskcacheManager(_cache)
 
 app = dash.Dash(
     __name__,
