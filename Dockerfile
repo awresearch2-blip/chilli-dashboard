@@ -22,10 +22,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 COPY chilli_web/requirements.txt ./chilli_web/requirements.txt
 RUN pip install --no-cache-dir -r chilli_web/requirements.txt
 
-COPY chilli_desktop ./chilli_desktop
-COPY chilli_web ./chilli_web
-COPY run_web.py run_web_production.py ./
-COPY "Chilli mastersheet for dashboard.xlsx" ./
+## Everything else, including the workbook (its filename has spaces, which
+## some Dockerfile frontends mis-parse in a quoted COPY source -- letting
+## .dockerignore control what's excluded avoids referencing that name here).
+COPY . .
 
 # Writable dirs the app creates at runtime (logs, exports, Dash's diskcache).
 RUN mkdir -p logs exports chilli_web/.diskcache
